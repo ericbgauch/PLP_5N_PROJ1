@@ -40,16 +40,13 @@
     %subsection=TITLE,  % títulos de subseções convertidos em letras maiúsculas
     %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
     % -- opções do pacote babel --
-    english,            % idioma adicional para hifenização
-    french,             % idioma adicional para hifenização
-    spanish,            % idioma adicional para hifenização
     brazil              % o último idioma é o principal do documento
     ]{abntex2}
 
 % ---
 % Pacotes básicos 
 % ---
-\usepackage{lmodern}            % Usa a fonte Latin Modern          
+\usepackage{palatino}            % Usa a fonte Latin Modern          
 \usepackage[T1]{fontenc}        % Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}     % Codificacao do documento (conversão automática dos acentos)
 \usepackage{lastpage}           % Usado pela Ficha catalográfica
@@ -95,9 +92,13 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Trabalho sobre a evolução \\das principais linguagens de programação}
-\autor{Eric Bueno Gauch\\ Guilherme Gatto Gonçalves da Silva\\ Bruno Estima 
-Correia Milanesi Castanheira de Souza}
+\titulo{Trabalho de Paradigmas de \\ Linguagens de Programação}
+\autor{
+    Eric Bueno Gauch
+    \and
+    Guilherme Gatto Gonçalves da Silva
+    \and
+    Bruno Estima Correia Milanesi Castanheira de Souza}
 \local{Brasil}
 \data{2017, v-0.0.1}
 \instituicao{%
@@ -130,7 +131,7 @@ evolução das principais linguagens de programação}
         pdfcreator={LaTeX with abnTeX2},
         pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
         colorlinks=true,            % false: boxed links; true: colored links
-        linkcolor=blue,             % color of internal links
+        linkcolor=black,             % color of internal links
         citecolor=blue,             % color of links to bibliography
         filecolor=magenta,              % color of file links
         urlcolor=blue,
@@ -182,271 +183,9 @@ evolução das principais linguagens de programação}
 % ---
 
 % ---
-% Inserir a ficha bibliografica
-% ---
-
-% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
-% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
-% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
-% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
-% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
-% o conteúdo de implementação deste arquivo pelo comando abaixo:
-%
-% \begin{fichacatalografica}
-%     \includepdf{fig_ficha_catalografica.pdf}
-% \end{fichacatalografica}
-\begin{fichacatalografica}
-    \vspace*{\fill}                 % Posição vertical
-    \hrule                          % Linha horizontal
-    \begin{center}                  % Minipage Centralizado
-    \begin{minipage}[c]{12.5cm}     % Largura
-    
-    \imprimirautor
-    
-    \hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-    \imprimirlocal, \imprimirdata-
-    
-    \hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
-    
-    \hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-    
-    \hspace{0.5cm}
-    \parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-    \imprimirdata.}\\
-    
-    \hspace{0.5cm}
-        1. Palavra-chave1.
-        2. Palavra-chave2.
-        I. Orientador.
-        II. Universidade xxx.
-        III. Faculdade de xxx.
-        IV. Título\\            
-    
-    \hspace{8.75cm} CDU 02:141:005.7\\
-    
-    \end{minipage}
-    \end{center}
-    \hrule
-\end{fichacatalografica}
-% ---
-
-% ---
-% Inserir errata
-% ---
-\begin{errata}
-Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
-
-\vspace{\onelineskip}
-
-FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
-reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
-rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
-cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
-Zootecnia, Universidade de São Paulo, São Paulo, 2011.
-
-\begin{table}[htb]
-\center
-\footnotesize
-\begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
-  \hline
-   \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
-    \hline
-    1 & 10 & auto-conclavo & autoconclavo\\
-   \hline
-\end{tabular}
-\end{table}
-
-\end{errata}
-% ---
-
-% ---
-% Inserir folha de aprovação
-% ---
-
-% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
-% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
-% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
-% imagem da página assinada pela banca com o comando abaixo:
-%
-% \includepdf{folhadeaprovacao_final.pdf}
-%
-\begin{folhadeaprovacao}
-
-  \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-    \end{center}
-    \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
-    \end{minipage}%
-    \vspace*{\fill}
-   \end{center}
-        
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
-      
-   \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-  
-\end{folhadeaprovacao}
-% ---
-
-% ---
-% Dedicatória
-% ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
-\end{dedicatoria}
-% ---
-
-% ---
-% Agradecimentos
-% ---
-\begin{agradecimentos}
-Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
-Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
-Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
-projeto abn\TeX\ foram extraídos de
-\url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
-contribuíram para que a produção de trabalhos acadêmicos conforme
-as normas ABNT com \LaTeX\ fosse possível.
-
-Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
-da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-Brasília (CPAI), ao grupo de usuários
-\emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-novos voluntários do grupo
-\emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-\url{http://abntex2.googlecode.com/}}~que contribuíram e que ainda
-contribuirão para a evolução do \abnTeX.
-
-\end{agradecimentos}
-% ---
-
-% ---
-% Epígrafe
-% ---
-\begin{epigrafe}
-    \vspace*{\fill}
-    \begin{flushright}
-        \textit{``Não vos amoldeis às estruturas deste mundo, \\
-        mas transformai-vos pela renovação da mente, \\
-        a fim de distinguir qual é a vontade de Deus: \\
-        o que é bom, o que Lhe é agradável, o que é perfeito.\\
-        (Bíblia Sagrada, Romanos 12, 2)}
-    \end{flushright}
-\end{epigrafe}
-% ---
-
-% ---
-% RESUMOS
-% ---
-
-% resumo em português
-\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
-\begin{resumo}
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
-
- \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
-\end{resumo}
-
-% resumo em inglês
-\begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-   This is the english abstract.
-
-   \vspace{\onelineskip}
- 
-   \noindent 
-   \textbf{Key-words}: latex. abntex. text editoration.
- \end{otherlanguage*}
-\end{resumo}
-
-% resumo em francês 
-\begin{resumo}[Résumé]
- \begin{otherlanguage*}{french}
-    Il s'agit d'un résumé en français.
- 
-   \textbf{Mots-clés}: latex. abntex. publication de textes.
- \end{otherlanguage*}
-\end{resumo}
-
-% resumo em espanhol
-\begin{resumo}[Resumen]
- \begin{otherlanguage*}{spanish}
-   Este es el resumen en español.
-  
-   \textbf{Palabras clave}: latex. abntex. publicación de textos.
- \end{otherlanguage*}
-\end{resumo}
-% ---
-
-% ---
-% inserir lista de ilustrações
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de tabelas
-% ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de abreviaturas e siglas
-% ---
-\begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
-\end{siglas}
-% ---
-
-% ---
-% inserir lista de símbolos
-% ---
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
-% ---
-
-% ---
 % inserir o sumario
 % ---
+\clearpage
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
@@ -465,6 +204,10 @@ contribuirão para a evolução do \abnTeX.
 \chapter*[Introdução]{Introdução}
 \addcontentsline{toc}{chapter}{Introdução}
 % ----------------------------------------------------------
+
+Este primeiro trabalho da disciplina de Paradigmas de Linguagens de Programação
+tem como objetivo introduzir as principais linguagens de programação em uso 
+atualmente bem como  
 
 Este documento e seu código-fonte são exemplos de referência de uso da classe
 \textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
@@ -508,8 +251,78 @@ Lauro César Araujo
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Preparação da pesquisa}
+\part{Evolução das principais linguagens de programação}
 % ----------------------------------------------------------
+
+O desenvolvimento inicial de C ocorreu no AT&T Bell Labs entre 1969 e 1973.5 de 
+acordo com Ritchie, o período mais criativo ocorreu em 1972. A linguagem foi chamada 
+“C”, porque suas características foram obtidas a partir de uma linguagem anteriormente 
+chamado de ” B”, que de acordo com a Ken Thompson era versão reduzida da linguagem de 
+programação BCPL.6
+
+A versão original PDP-11 do sistema Unix foi desenvolvido em assembly. Em 1973, com a 
+adição dos tipos struct, a linguagem C tornou-se poderosa o suficiente para que a 
+maior parte do kernel do Unix fosse reescrito em C. Este foi um dos primeiros núcleos 
+de sistemas operacionais implementadas em uma linguagem diferente da linguagem Assembly. 
+Em 1977, foram feitas novas mudanças por Ritchie e Stephen C. Johnson para facilitar a 
+portabilidade do sistema operacional Unix. O Portable C Compiler’ de Johnson serviu de 
+base para várias implementações de C em novas plataformas.
+
+Durante muito tempo C foi distribuído juntamente com a versão 5 do UNIX. Isso, aliado ao 
+fato de que um código produzido em uma máquina era facilmente recompilado em outra, causou 
+uma popularização de C, tornando necessária uma padronização. Essa padronização se deu em 
+1983, quando foi estabelecido um padrão pelo ANSI (American National Standard Institute).
+
+O inicio de sua popularidade se deu por C ser altamente portável. Um código escrito em uma 
+máquina pode facilmente ser compilado em outra. Hoje em dia, essa vantagem não fica tão 
+evidente, pois existe uma certa padronização . Mas até poucos anos atrás havia uma grande 
+diversidade de hardware, o que causava problemas de incompatibilidade com diversas linguagens. 
+Os arquitetos de C pensaram nisso, criando uma linguagem que ao invés de comandos, usa funções 
+para a entrada e saída de dados. Isso é bem explicado em Funções de E/S.
+
+A linguagem C tornou-se uma das linguagens de programação mais usadas. Porém, encontra seus 
+limites quando o tamanho de um projeto ultrapassa um certo ponto. Ainda que este limite possa 
+variar de projeto para projeto, quanto o tamanho de um programa se encontra entre 25.000 e 100.000 
+linhas, torna-se problemático o gerenciamento, tendo em vista que é difícil compreende-lo como 
+um todo. Para resolver este problema, em 1980, enquanto trabalhava nos laboratórios da Bell, 
+em Murray Bill, New Jersey, Bjarne Stroustrup acrescentou várias extensões à linguagem C e chamou 
+inicialmente esta nova linguagem de “C com classes”. Entretanto, em 1983, o nome foi mudado para C++. 
+Muitas adições foram feitas pós-Stroustrup para que a linguagem C pudesse suportar a programação 
+orientada a objetos, às vezes referenciada como POO.
+
+Hoje em dia mesmo após todo esse tempo, C continua sendo bastante utilizada. A linguagem C++ , 
+implementada a partir de C é a linguagem mais usada para desenvolvimento de aplicações comerciais. 
+Como C++ é basicamente a linguagem C melhorada e com orientação a objetos, o conhecimento de C é 
+essencial para o domínio dessa outra linguagem.
+
+A popularização do ambiente Windows criou um outro uso à C. A criação de DLLs, feita através dessa 
+linguagem tem sustentado muito programador . Graças à portabilidade já discutida antes, C foi a 
+escolha lógica para esse uso.
+
+Frequentemente referenciada como uma linguagem de nível médio, posicionando-se entre o assembler 
+(baixo nível) e o Pascal (alto nível) Uma das razões da invenção da linguagem C foi dar ao programador 
+uma linguagem de alto nível que poderia ser utilizada como uma substituta para a linguagem assembly. 
+Entretanto, ainda que a linguagem C possua estruturas de controle de alto nível, como é encontrado na 
+Pascal, ela também permite que o programador manipule bits, bytes e endereços de uma maneira mais 
+proximamente ligada à máquina, ao contrário da abstração apresentadas por outras linguagens de alto 
+nível. Por esse motivo, a linguagem C tem sido ocasionalmente chamada de “código assembly de alto 
+nível”. Por sua natureza dupla, a linguagem C permite que sejam criado programas rápidos e eficientes 
+sem a necessidade de se recorrer a linguagem SCHILDT, H. Turbo C++: guia do usuário. São Paulo : 
+Makron Books,1992.
+
+A filosofia que existe por trás da linguagem C é que o programador sabe realmente o que está fazendo. 
+Por esse motivo, a linguagem C quase nunca “colocasse no caminho” do programador, deixando-o livre 
+para usar (ou abusar) dela de qualquer forma que queira. Existe uma pequena verificação de erro de 
+execução runtime error. Por exemplo, se por qualquer motivo você quiser sobrescrever a memória na qual 
+o seu programa está atualmente residindo, o compilador nada fará para impedi-lo. O motivo para essa 
+“liberdade na programação” é permitir ao compilador C criar códigos muito rápidos e eficientes, já 
+que ele deixa a responsabilidade da verificação de erros para você. Em outras palavras, a linguagem C 
+considera que você é hábil o bastante para adicionar suas próprias verificações de erro quando necessário. 
+Quando C++ foi inventado, Bjarne Stroustrup sabia que era importante manter o espírito original da 
+linguagem C, incluindo a eficiência, a natureza de nível médio e a filosofia de que o programador, 
+não a linguagem, está com as responsabilidades, enquanto, ao mesmo tempo, acrescentava o suporte à 
+programação orientada a objetos. Assim, o C++ proporciona ao programador a liberdade e o controle da 
+linguagem C junto com o poder dos objetos.
 
 % ---
 % Capitulo com exemplos de comandos inseridos de arquivo externo 
